@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_citym_normal_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/grid_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:maxLines="1"
+        android:textSize="22sp" />
+
+<!--   <TextView
+        android:id="@+id/grid_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:layout_below="@id/grid_city" />
+
+    <TextView
+        android:id="@+id/grid_temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_below="@id/grid_weather" />    --> 
+    
+  <TextView
+        android:id="@+id/grid_item_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grid_city"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" 
+        android:layout_marginBottom="5dp"/>  
+
+</RelativeLayout>

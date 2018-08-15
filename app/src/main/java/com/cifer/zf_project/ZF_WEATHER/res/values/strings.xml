@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weather</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="weather">Net Error</string>
+    <string name="location">New York </string>
+    <string name="date">October 25th  Tuesday</string>
+    <string name="temp">16</string>
+    <string name="textweather">Partly Cloudycode</string>
+    <string name="skycell">Skycell Weather</string>
+    <string name="search_info">Input City,PostCode,Airport</string>
+    <string name="cancel">Cancel</string>
+    <string name="addcity">City Manager</string>
+    <string name="lifeindex">Add City</string>
+    <string name="changetheski">Show Weather</string>
+    <string name="shareapplication">Sharing application</string>
+    <string name="exit">Exit</string>
+    <string name="delete">X</string>
+    <string name="default1">Set Default</string>
+    <string name="default2">Default</string>
+    <string name="delete2">delete</string>
+    <string name="goodweather">What a nice day</string>
+    <string name="goodmood">Good mood</string>
+    <string name="sunset">4:55 pm</string>
+    <string name="sunraise"> 6:23 am</string>
+    <string name="dayweather">Mostly Cloudy</string>
+    <string name="temphightolow">9℃ ~16℃</string>
+    <string name="nengjiandu">25.91 Km</string>
+    <string name="update">updated:</string>
+    <string name="sunset_ex">Sunset</string>
+    <string name="sunset_values_ex">20</string>
+    <string name="visibility">Visibility</string>
+    <string name="visibility_values">12</string>
+    <string name="everyday">Everyday</string>
+    <string name="addtomain">Add</string>
+    <string name="add_dialog">Add To MainPage?</string>
+    <string name="tv_cancel">Cancel</string>
+    <string name="tv_confirm">Confirm</string>
+    <string name="datetime">Dec 2017 04:44</string>
+    <string name="tempsign">℃</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+</resources>

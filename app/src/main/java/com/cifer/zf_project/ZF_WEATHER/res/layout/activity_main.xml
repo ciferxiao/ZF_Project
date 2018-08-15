@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/left_layout_bg" >
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/homep_titlemenu_normal" />
+
+    <ImageView
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/homep_titlebt_bg"
+        android:onClick="onClick"
+        android:src="@drawable/homep_title_refresh" />
+
+    <TextView
+        android:id="@+id/add_to_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="26dp"
+        android:onClick="onClick"
+        android:text="@string/addtomain"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+         />
+
+    <GridView
+        android:id="@+id/listView1"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_below="@+id/dayweather"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:listSelector="@android:color/transparent"
+		 android:scrollbars="none"
+        android:numColumns="5" >
+    </GridView>
+    <!--
+    <com.zhanfan.zf_weather.tool.HorizontalListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent"
+        android:layout_below="@+id/location"  
+        android:fillViewport="true"
+        android:layout_marginTop="45dp" >
+    </com.zhanfan.zf_weather.tool.HorizontalListView>
+    -->
+
+    <TextView
+        android:id="@+id/daytemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/refresh"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/dayweather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <!--
+         <include
+        android:id="@+id/tv_info"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/listView1"
+        android:layout_marginBottom="40dp"
+        android:visibility="invisible"
+        layout="@layout/main_layout_bottom" />
+    -->
+
+    <LinearLayout
+        android:id="@+id/tv_info"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/listView1"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sunset_ex"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/sunset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0.2dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="#60ABA7A7" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/visibility"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/nengjiandu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_updatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tv_info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wholerelativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+	 android:layoutDirection="ltr">
+
+    <LinearLayout
+        android:id="@+id/linerlayout1"
+        android:layout_width="200dp"
+        android:layout_height="185dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="samsung_clock"
+            android:textColor="#ffffff"
+            android:textSize="65dp" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/weather"
+            android:src="@drawable/tianqi" />
+
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            />
+
+        <!--<TextView-->
+        <!--android:id="@+id/skyweather"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_toRightOf="@+id/viewdivider"-->
+        <!--android:text="@string/skycell"-->
+        <!--android:layout_marginTop="-5dp"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:visibility="gone"-->
+        <!--android:textSize="15dp" />-->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/linerlayouthour"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linerlayout1">
+
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView1"-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="15dp"-->
+        <!--android:src="@drawable/num_01"-->
+        <!--android:layout_marginLeft="30dp"/>-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView2"-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="15dp"-->
+        <!--android:layout_toRightOf="@+id/imageView1"-->
+        <!--android:src="@drawable/num_01" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageViewpoint"-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="15dp"-->
+        <!--android:layout_toRightOf="@+id/imageView2"-->
+        <!--android:src="@drawable/alarm_num_colon" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView3"-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="15dp"-->
+        <!--android:layout_toRightOf="@+id/imageViewpoint"-->
+        <!--android:src="@drawable/num_01" />-->
+
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView4"-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="15dp"-->
+        <!--android:layout_toRightOf="@+id/imageView3"-->
+        <!--android:src="@drawable/num_04" />-->
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:text="@string/update"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:visibility="gone" />
+
+        <TextClock
+            android:id="@+id/the_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="77dp"
+            android:format12Hour="hh:mm"
+            android:format24Hour="kk:mm"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/the_clock"
+            android:singleLine="true"
+            android:text="@string/date"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+    <!--
+         <View
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:background="#000000" />
+    -->
+
+
+
+
+</LinearLayout>

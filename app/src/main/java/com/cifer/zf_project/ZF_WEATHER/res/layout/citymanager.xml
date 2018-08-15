@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#1C86EE" >
+
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/ic_settings_location" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" 
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track"
+            android:switchMinWidth="50dp"
+            android:textOn=""
+            android:textOff=""/>
+       
+    </RelativeLayout>
+
+   
+
+   <!--  <ListView
+        android:id="@+id/city_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:background="@android:color/transparent">
+    </ListView> -->
+
+    <com.zhanfan.zf_weather.sidedelete.SwipeListView
+        android:id="@+id/swipeListView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.zhanfan.zf_weather.sidedelete.SwipeListView>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffffff</color>
+    <color name="red">#ffff0000</color>
+    <color name="black">#ff000000</color>
+    <color name="blue">#ff5394c5</color>
+    <color name="list_item_bg">#ff5394c5</color>
+    <color name="sky_blue">#ff248dbc</color>
+    <color name="grey">#1A1A1A</color>
+    <color name="font_common_1">#424242</color>
+    <color name="font_common_2">#a1a1a1</color>
+    <color name="font_blue">#42369a</color>
+    <color name="font_green">#00cccc</color>
+    <color name="commom_background">#f3f3f3</color>
+    <color name="left_menu_bt_press">#aaABA7A7</color>
+    <color name="left_menu_bt_normal">#F2EDED</color>
+    
+    <color name="system_primary_color">#ff263238</color> <!-- blue grey 900 -->
+    <color name="system_accent_color">#ff80CBC4</color> <!-- deep teal 200 -->
+
+</resources>
