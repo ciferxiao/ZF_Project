@@ -1,0 +1,103 @@
+package com.zhanfan.zf_weather.tool;
+
+import java.util.List;
+
+
+import com.zhanfan.zf_weather.R;
+import com.zhanfan.zf_weather.database.Sqlitedatabase;
+import com.zhanfan.zf_weather.entity.Cityandwoeid;
+import com.zhanfan.zf_weather.sidedelete.SwipeItemLayout;
+
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;  
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+public class Sidebaseadapter extends BaseAdapter {
+	private LayoutInflater mInflater;
+	private List<Cityandwoeid> citymanager;
+	private Context context;
+
+	public Sidebaseadapter(List<Cityandwoeid> citymanager, Context context) {
+		super();
+		this.citymanager = citymanager;
+		this.context = context;
+		
+		mInflater=LayoutInflater.from(context);
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return citymanager.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return citymanager.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		ViewHold viewHold=null;
+		View view1 =null;
+		View view2 =null;
+		if(convertView==null){
+			viewHold=new ViewHold();
+			view1=mInflater.inflate(R.layout.sidedelete1, null);
+			view2=mInflater.inflate(R.layout.sidedelete2, null);
+			viewHold.nowtemp=(TextView) view1.findViewById(R.id.nowtep);
+			viewHold.cityname=(TextView) view1.findViewById(R.id.citymanager_cityname);
+			viewHold.weatherinfor=(TextView) view1.findViewById(R.id.citymanager_weatherinfor);
+			viewHold.lowtohightemp=(TextView) view1.findViewById(R.id.citymanager_tempre);
+			viewHold.setdefaultcity=(TextView) view2.findViewById(R.id.setdefault);
+			viewHold.delete=(TextView) view2.findViewById(R.id.deletecity);
+			convertView = new SwipeItemLayout(view1, view2, null, null);
+			convertView.setTag(viewHold);
+		}else{
+			viewHold=(ViewHold) convertView.getTag();
+		}
+		final int pos = position;
+		viewHold.setdefaultcity.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Sqlitedatabase.updatecitydefault(1, citymanager.get(pos).getCityfid());
+				Sqlitedatabase.update1citydefault(0, citymanager.get(pos).getCityfid());
+				Intent intent = new Intent();
+				intent.setAction("com.zhanfan.setdefaultcity");
+				intent.putExtra("citywoeid", citymanager.get(pos).getWoeidString());
+				intent.putExtra("cityname", citymanager.get(pos).getCityname());
+				context.sendBroadcast(intent);
+				
+			}
+		});
+		
+		viewHold.delete.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				 Sqlitedatabase.deletecityfromwoeidtable(citymanager.get(pos).getWoeidString());
+	               Sqlitedatabase.deletecityfromweatherinformation(citymanager.get(pos).getWoeidString());
+					Log.i("zhaoyi_delete", "zhaoyidelete");
+				
+					citymanager.remove(pos);
+					notifyDataSetChanged();
+			}
+		});
+		viewHold.nowtemp.setText(Sqlitedatabase.getnowtempandweather(citymanager.get(pos).getWoeidString()).getTemString()+"
