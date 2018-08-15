@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="left"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAllCaps="false"
+        android:background="@drawable/dialog_listitem_bg"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="17dp"
+        android:text="@string/timer_delete"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+    
+    <View 
+           android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/diliver_color"
+        />
+
+    <Button
+        android:id="@+id/dst_setting"
+        android:layout_width="match_parent"
+        android:textAllCaps="false"
+        android:layout_height="match_parent"
+        android:background="@drawable/dialog_listitem_bg"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="17dp"
+        android:text="@string/dst_setting"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+</LinearLayout>

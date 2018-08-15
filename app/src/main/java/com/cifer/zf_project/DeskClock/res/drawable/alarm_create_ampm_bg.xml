@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--@drawable/alarm_setting_btn_pressed  
+     @drawable/alarm_setting_btn -->
+    <item android:drawable="@color/white_69p" android:state_pressed="true"/>
+    <item android:drawable="@color/grey" android:state_pressed="false"/>
+
+</selector>

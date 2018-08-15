@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+   <include layout="@layout/tab_header"
+            android:id="@+id/main_header"
+   />
+ <!--   <Button
+        android:id="@+id/tab_header_left_btn"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="15dp"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:background="#00000000"
+        android:text="@string/edit"
+        android:textSize="@dimen/header_button_text_size"
+        android:textColor="@color/clock_green"
+        android:onClick="onClick"
+        android:clickable="true"
+        />
+    <TextView
+        android:id="@+id/tab_header_middle_tv"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:text="@string/menu_clock"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/tab_header_left_btn"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:textColor="@color/blackish"
+        
+        android:onClick="onClick"
+        android:clickable="true"
+        android:textSize="@dimen/header_textview_text_size" />
+                       android:text="@string/add" -->
+ <!--    <Button
+        android:id="@+id/tab_header_right_btn"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:layout_alignParentRight="true"
+        android:text="@string/add"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="right|center_vertical"
+        android:paddingRight="25dp"
+        android:textSize="@dimen/header_button_plus_text_size"
+        android:background="#00000000"
+        android:textColor="@color/clock_green"
+        android:onClick="onClick"
+        android:clickable="true"
+        
+        />      -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f5f5f5"
+        android:splitMotionEvents="false"
+        android:layout_above="@+id/division_bottom"
+        android:layout_below="@id/main_header"
+        />
+
+    <ImageView
+        android:id="@id/division_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/shadow_view"
+        android:contentDescription="@null"
+        android:layout_above="@+id/view1"/>
+        
+    <ImageView
+        android:id="@id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/shadow_view"
+        android:contentDescription="@null"
+        android:layout_above="@+id/main_bottom"/>
+
+    <!--android:checkedButton="@+id/radio_worldclock" -->
+    <RadioGroup
+        android:id="@id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/header_bottom_color"
+        android:paddingTop="1dp"
+        android:checkedButton="@+id/radio_alarm"
+        android:paddingBottom="2dp"
+        android:layout_alignParentBottom="true">
+        <RadioButton
+            android:id="@+id/radio_alarm"
+            style="@style/MainBottomRadio"
+            android:textSize="15sp"
+            android:text="@string/menu_alarm"/>
+        <RadioButton
+            android:id="@+id/radio_worldclock"
+            style="@style/MainBottomRadio"
+            android:text="@string/menu_clock"
+            android:textSize="15sp"
+            />
+        <RadioButton
+            android:id="@+id/radio_stopwatch"
+            style="@style/MainBottomRadio"
+            android:textSize="15sp"
+            android:text="@string/menu_stopwatch"/>
+        <RadioButton
+            android:id="@+id/radio_timer"
+            style="@style/MainBottomRadio"
+            android:textSize="15sp"
+            android:text="@string/menu_timer"/>
+    </RadioGroup>
+</RelativeLayout>

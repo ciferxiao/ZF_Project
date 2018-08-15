@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/time_stopwatch_btnParent_bg"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/timer_frame"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/timer_min_height"
+         >
+
+        <FrameLayout
+            android:id="@+id/timers_list_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.android.deskclock.widget.sgv.StaggeredGridView
+                android:id="@+id/timers_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/time_stopwatch_btnParent_bg"
+                android:divider="@null"
+                android:dividerHeight="@dimen/timer_divider_height" />
+        </FrameLayout> 
+
+        <LinearLayout
+            android:id="@+id/timer_set"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp" >
+
+            <com.android.deskclock.widget.WheelView
+                android:id="@+id/timer_hour"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.android.deskclock.widget.WheelView
+                android:id="@+id/timer_mins"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/timer_devision_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_below="@id/timer_frame"
+        android:background="@color/time_stopwatch_btnParent_bg" />
+
+
+    <ImageView
+        android:id="@+id/timer_devision_2"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_below="@id/timer_devision_1"
+        android:background="@color/time_stopwatch_btnParent_bg" />
+<!--android:gravity="center" -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/timer_devision_2"
+        android:background="@color/time_stopwatch_btnParent_bg"
+        android:paddingTop="20dp" 
+        android:layout_marginLeft="50dp"
+        >
+
+        <Button
+            android:id="@+id/timer_control_left"
+            style="@style/ButtonLeftStyle"
+            android:layout_width="@dimen/timer_control_btn_width"
+            android:layout_height="@dimen/timer_control_btn_width"
+            android:textAllCaps="false"
+            android:text="@string/start_timer"
+            android:textColor="@color/white" 
+            
+            
+            />
+
+        <Button
+            android:id="@+id/timer_control_right"
+            style="@style/ButtonRightStyle"
+            android:layout_width="@dimen/timer_control_btn_width"
+            android:layout_height="@dimen/timer_control_btn_width"
+            android:layout_marginLeft="50dp"
+            android:textAllCaps="false"
+            android:layout_toRightOf="@id/timer_control_left"
+            android:text="@string/pause"
+            android:textColor="@color/white" />
+            
+    </RelativeLayout>
+
+    <com.android.deskclock.TimerSetupView
+        android:id="@+id/timer_setup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/timer_frame"
+        android:layout_marginEnd="16dip"
+        android:layout_marginLeft="16dip"
+        android:background="@color/time_stopwatch_btnParent_bg"
+        android:layout_marginRight="16dip"
+        android:layout_marginStart="16dip"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/timer_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/footer_bg"
+        android:visibility="gone" >
+<!-- -->
+        <ImageButton
+            android:id="@+id/timer_add_timer"
+            style="@style/button"
+            android:layout_width="56dip"
+            android:layout_height="56dip"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/main_button_normal"
+            android:contentDescription="@string/timer_add_timer"
+            android:src="@drawable/ic_add" />
+    </FrameLayout>
+</RelativeLayout>
+<!--    <LinearLayout
+        android:id="@+id/new_timer_page"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <com.android.deskclock.TimerSetupView
+            android:id="@+id/timer_setup"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timer_btn_bg1"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/diliver_color"
+            android:paddingTop="6dp" />
+
+        <Button
+            android:id="@+id/timer_start1"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:gravity="center"
+            android:text="@string/timer_start"
+            android:textColor="@color/start_btn_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timer_btn"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/cut_off_rule"
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/diliver_color"
+            android:paddingTop="6dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/timer_btn_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/timer_cancel"
+                style="@style/button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/bg_color"
+                android:textColor="#00A8FF" />
+
+            <Button
+                android:id="@+id/timer_start"
+                style="@style/button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/bg_color"
+                android:gravity="center"
+                android:textColor="#FF1E00" />
+        </LinearLayout>
+    </LinearLayout> -->
+    
+  <!--   <RelativeLayout
+        android:id="@+id/timer_select_ring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timer_devision_1"
+        android:background="@drawable/item_bg"
+        android:minHeight="45dp"
+        android:onClick="clockButtonsOnClick"
+        android:paddingTop="2dp" >
+
+       <TextView
+            android:id="@+id/timer_when_timer_ends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/when_timer_ends"
+            android:textColor="@color/black"
+            android:textSize="18sp" />      
+
+        <TextView
+            android:id="@+id/timer_which_ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/timer_select_ring_button"
+            android:layout_toRightOf="@id/timer_when_timer_ends"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="@string/never"
+            android:textColor="@color/noEnable_color"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@id/timer_select_ring_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/go_to_next"
+            android:contentDescription="@null" />
+    </RelativeLayout>             -->
+
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/time_stopwatch_btnParent_bg"
+    >
+    <LinearLayout
+        android:id="@+id/no_clock_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/time_stopwatch_btnParent_bg"
+
+        android:orientation="vertical"
+        android:visibility="gone" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingTop="105dp"
+            android:text="@string/no_world_clock"
+            android:textColor="#969696"
+            android:textSize="19sp" />
+    </LinearLayout>
+    
+    <com.android.deskclock.widget.TouchInterceptor
+        android:id="@+id/cities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/time_stopwatch_btnParent_bg"
+        android:divider="@color/diliver_color"
+        android:clickable="false"
+        android:dividerHeight="0.6dp" 
+        ></com.android.deskclock.widget.TouchInterceptor>
+
+    <LinearLayout
+        android:id="@+id/desk_clock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="47dp"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            android:background="@drawable/footer_bg" >
+
+            <ImageButton
+                android:id="@+id/cities_button"
+                style="@style/button"
+                android:layout_width="@dimen/footer_button_size"
+                android:layout_height="@dimen/footer_button_size"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/footer_button_layout_margin"
+                android:layout_marginEnd="@dimen/footer_button_layout_margin"
+                android:layout_marginLeft="@dimen/footer_button_layout_margin"
+                android:layout_marginRight="@dimen/footer_button_layout_margin"
+                android:layout_marginStart="@dimen/footer_button_layout_margin"
+                android:layout_marginTop="@dimen/footer_button_layout_margin"
+                android:background="@drawable/main_button_normal"
+                android:contentDescription="@string/button_cities"
+                android:onClick="clockButtonsOnClick"
+                android:src="@drawable/ic_globe" />
+
+            <ImageButton
+                android:id="@+id/menu_button"
+                style="?android:attr/actionOverflowButtonStyle"
+                android:layout_width="@dimen/footer_button_size"
+                android:layout_height="@dimen/footer_button_size"
+                android:layout_gravity="end|center_vertical"
+                android:background="@drawable/item_background"
+                android:contentDescription="@string/button_menu" />
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

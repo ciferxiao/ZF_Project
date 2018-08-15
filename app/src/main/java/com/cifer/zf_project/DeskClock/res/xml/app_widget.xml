@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <appwidget-provider   
+    xmlns:android="http://schemas.android.com/apk/res/android"   
+    android:minWidth="320dip"  
+    android:minHeight="70dip"  
+    android:updatePeriodMillis="1000"  
+     android:previewImage="@drawable/ic_launchers"
+    android:initialLayout="@layout/main">  
+    
+</appwidget-provider>   -->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="500px"
+    android:minHeight="103px"
+    android:minResizeWidth="500px"
+    android:minResizeHeight="103px"
+    android:updatePeriodMillis="0"
+    android:previewImage="@drawable/desk_clock"
+    android:resizeMode="vertical|horizontal"
+    android:widgetCategory="keyguard|home_screen"
+     android:initialLayout="@layout/main"
+    >
+</appwidget-provider>

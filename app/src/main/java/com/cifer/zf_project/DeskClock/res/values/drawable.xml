@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="alarm_item_off">#ffffff</drawable><!-- textview字体灰色-->
+    <drawable name="alarm_item_on">#ffffff</drawable> <!-- 白色字体-->
+    <drawable name="alarm_item_press">#26000000</drawable>
+    
+</resources>

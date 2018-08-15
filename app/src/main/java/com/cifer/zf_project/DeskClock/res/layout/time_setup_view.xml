@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/timer_anim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/bg_color"
+        android:orientation="vertical" >
+
+<!-- -->     <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/timer_text_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/hours_label_description" 
+                android:textSize="17sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                style="@style/timer_text_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="17sp"
+                android:text="@string/minutes_label_description" 
+                android:textColor="@color/black"/>
+
+            <TextView
+                style="@style/timer_text_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="17sp"
+                android:text="@string/seconds_label_description" 
+                android:textColor="@color/black"/>
+        </LinearLayout>     
+
+        <com.android.deskclock.timer.TimerView
+            android:id="@+id/timer_time_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:layoutDirection="ltr"
+            android:orientation="horizontal"
+            android:paddingBottom="25dp" >
+        </com.android.deskclock.timer.TimerView>  
+<!--            <include layout="@layout/timer_h_mm_ss_view" />
+
+            <ImageButton
+                android:id="@+id/delete"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/timer_setup_delete_start_margin"
+                android:background="@drawable/item_background"
+                android:contentDescription="@string/timer_delete"
+                android:padding="@dimen/timer_setup_delete_padding"
+                android:src="@drawable/ic_backspace"
+                android:visibility="gone" />
+            -->
+    </LinearLayout>
+<!-- 键盘
+    <LinearLayout
+        android:id="@+id/number_keypad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#898C90"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include
+            android:id="@+id/first"
+            layout="@layout/three_keys_view" />
+
+        <include
+            android:id="@+id/second"
+            layout="@layout/three_keys_view" />
+
+        <include
+            android:id="@+id/third"
+            layout="@layout/three_keys_view" />
+
+        <include
+            android:id="@+id/fourth"
+            layout="@layout/three_keys_function_view" />
+    </LinearLayout>-->
+
+</RelativeLayout>

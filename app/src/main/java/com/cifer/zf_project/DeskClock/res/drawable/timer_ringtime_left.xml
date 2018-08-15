@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/clear_alarm_x_arrow_big_01"
+        android:duration="400"/>
+    <item
+        android:drawable="@drawable/clear_alarm_x_arrow_big_02"
+        android:duration="300"/>
+    <item
+        android:drawable="@drawable/clear_alarm_x_arrow_big_03"
+        android:duration="300"/>
+    <item
+        android:drawable="@drawable/clear_alarm_x_arrow_big_04"
+        android:duration="300"/>
+
+</animation-list>
